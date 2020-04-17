@@ -1,21 +1,21 @@
 {
-  "name": "blog-project",
-  "version": "1.0.0",
-  "description": "A blog application developed using Node.js and EJS",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "blog",
-    "node",
-    "ejs"
-  ],
-  "author": "Andrew Joel",
-  "license": "ISC",
-  "devDependencies": {
-    "ejs": "^3.0.2",
-    "express": "^4.17.1",
-    "nodemon": "^2.0.3"
-  }
+	"name": "blog-project",
+	"version": "1.0.0",
+	"description": "A blog application developed using Node.js and EJS",
+	"main": "index.js",
+	"scripts": {
+		"devStart": "nodemon src/js/index.js"
+	},
+	"keywords": [
+		"blog",
+		"node",
+		"ejs"
+	],
+	"author": "Andrew Joel",
+	"license": "ISC",
+	"devDependencies": {
+		"ejs": "^3.0.2",
+		"express": "^4.17.1",
+		"nodemon": "^2.0.3"
+	}
 }
