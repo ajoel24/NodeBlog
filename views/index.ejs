@@ -9,7 +9,13 @@
 			<% POSTS.forEach(function(post){ %>
 			  <div class="container">
 					<h3><%= post.postTitle %></h3>
-					<p><%= post.postBody %></p>
+					<p>
+						<% if(post.postBody.length > 200) { %>
+						 <%= post.postBody.slice(0, 200) + ". . ."; %>
+						<% } else { %>
+							<%= post.postBody %>
+						<% } %>
+						</p>
 				</div>
 			<% }); %>
 		</main>

@@ -78,4 +78,5 @@ app.get("/posts/:urlPostTitle", (req, res) => {
 		}
 	});
 });
+
 app.listen(PORT, () => console.log(`Server started at port ${PORT}`));
