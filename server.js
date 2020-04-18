@@ -66,9 +66,14 @@ app.post("/composeInput", (req, res) => {
 app.get("/posts/:urlPostTitle", (req, res) => {
 	const requestTitle = _.lowerCase(req.params.urlPostTitle);
 	POSTS.forEach((post) => {
-		let title = _.lowerCase(post.postTitle);
+		const title = _.lowerCase(post.postTitle);
 		if (title == requestTitle) {
-			console.log("Match found");
+			res.render("post", {
+				pageTitle: `Blog | ${post.postTitle}`,
+				postTitle: post.postTitle,
+				postBody: post.postBody,
+				copyrightYear,
+			});
 			return;
 		}
 	});
