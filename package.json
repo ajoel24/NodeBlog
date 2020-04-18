@@ -2,9 +2,9 @@
 	"name": "blog-project",
 	"version": "1.0.0",
 	"description": "A blog application developed using Node.js and EJS",
-	"main": "index.js",
+	"main": "server.js",
 	"scripts": {
-		"devStart": "nodemon src/js/index.js"
+		"devStart": "nodemon src/js/server.js"
 	},
 	"keywords": [
 		"blog",
