@@ -42,4 +42,10 @@ app.get("/contact", (req, res) => {
 	});
 });
 
+app.get("/compose", (req, res) => {
+	res.render("compose", {
+		copyrightYear,
+	});
+});
+
 app.listen(PORT, () => console.log(`Server started at port ${PORT}`));
