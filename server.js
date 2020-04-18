@@ -62,4 +62,13 @@ app.post("/composeInput", (req, res) => {
 	res.redirect("/");
 });
 
+app.get("/posts/:postTitle", (req, res) => {
+	const requestTitle = req.params.postTitle;
+	POSTS.forEach((post) => {
+		if (post.postTitle == requestTitle) {
+			console.log("Match found");
+			return;
+		}
+	});
+});
 app.listen(PORT, () => console.log(`Server started at port ${PORT}`));
