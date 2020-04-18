@@ -23,6 +23,7 @@ const POSTS = [];
 
 app.get("/", (req, res) => {
 	res.render("index", {
+		pageTitle: "Blog | Home",
 		homeText,
 		copyrightYear,
 	});
@@ -30,6 +31,7 @@ app.get("/", (req, res) => {
 
 app.get("/about", (req, res) => {
 	res.render("about", {
+		pageTitle: "Blog | About",
 		aboutText,
 		copyrightYear,
 	});
@@ -37,6 +39,7 @@ app.get("/about", (req, res) => {
 
 app.get("/contact", (req, res) => {
 	res.render("contact", {
+		pageTitle: "Blog | Contact",
 		contactText,
 		copyrightYear,
 	});
@@ -44,6 +47,7 @@ app.get("/contact", (req, res) => {
 
 app.get("/compose", (req, res) => {
 	res.render("compose", {
+		pageTitle: "Blog | Compose",
 		copyrightYear,
 	});
 });
