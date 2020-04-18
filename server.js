@@ -16,6 +16,9 @@ const homeText =
 	"Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur dolorum, saepe inventore quo dolores beatae totam sunt, ipsa numquam neque libero voluptates non illum modi. Minus laboriosam ipsum soluta quam.";
 const aboutText =
 	"Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur dolorum, saepe inventore quo dolores beatae totam sunt, ipsa numquam neque libero voluptates non illum modi. Minus laboriosam ipsum soluta quam.";
+const contactText =
+	"Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur dolorum, saepe inventore quo dolores beatae totam sunt, ipsa numquam neque libero voluptates non illum modi. Minus laboriosam ipsum soluta quam.";
+
 const copyrightYear = new Date().getFullYear();
 
 app.get("/", (req, res) => {
@@ -28,6 +31,13 @@ app.get("/", (req, res) => {
 app.get("/about", (req, res) => {
 	res.render("about", {
 		aboutText,
+		copyrightYear,
+	});
+});
+
+app.get("/contact", (req, res) => {
+	res.render("contact", {
+		contactText,
 		copyrightYear,
 	});
 });
