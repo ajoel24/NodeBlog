@@ -62,8 +62,8 @@ app.post("/composeInput", (req, res) => {
 	res.redirect("/");
 });
 
-app.get("/posts/:postTitle", (req, res) => {
-	const requestTitle = req.params.postTitle;
+app.get("/posts/:urlPostTitle", (req, res) => {
+	const requestTitle = req.params.urlPostTitle;
 	POSTS.forEach((post) => {
 		if (post.postTitle == requestTitle) {
 			console.log("Match found");
