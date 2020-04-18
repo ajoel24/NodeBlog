@@ -18,8 +18,8 @@ const aboutText =
 	"Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur dolorum, saepe inventore quo dolores beatae totam sunt, ipsa numquam neque libero voluptates non illum modi. Minus laboriosam ipsum soluta quam.";
 const contactText =
 	"Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur dolorum, saepe inventore quo dolores beatae totam sunt, ipsa numquam neque libero voluptates non illum modi. Minus laboriosam ipsum soluta quam.";
-
 const copyrightYear = new Date().getFullYear();
+const POSTS = [];
 
 app.get("/", (req, res) => {
 	res.render("index", {
@@ -49,8 +49,13 @@ app.get("/compose", (req, res) => {
 });
 
 app.post("/composeInput", (req, res) => {
-	let userContent = req.body.content;
-	console.log(userContent);
+	const post = {
+		postTitle: req.body.postTitle,
+		postBody: req.body.postBody,
+	};
+	POSTS.push(post);
+	console.log(POSTS);
+	res.redirect("/");
 });
 
 app.listen(PORT, () => console.log(`Server started at port ${PORT}`));
