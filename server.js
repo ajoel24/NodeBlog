@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
+const _ = require("lodash");
 const app = express();
 
 app.use(
@@ -63,9 +64,10 @@ app.post("/composeInput", (req, res) => {
 });
 
 app.get("/posts/:urlPostTitle", (req, res) => {
-	const requestTitle = req.params.urlPostTitle;
+	const requestTitle = _.lowerCase(req.params.urlPostTitle);
 	POSTS.forEach((post) => {
-		if (post.postTitle == requestTitle) {
+		let title = _.lowerCase(post.postTitle);
+		if (title == requestTitle) {
 			console.log("Match found");
 			return;
 		}
