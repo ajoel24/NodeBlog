@@ -48,4 +48,9 @@ app.get("/compose", (req, res) => {
 	});
 });
 
+app.post("/composeInput", (req, res) => {
+	let userContent = req.body.content;
+	console.log(userContent);
+});
+
 app.listen(PORT, () => console.log(`Server started at port ${PORT}`));
