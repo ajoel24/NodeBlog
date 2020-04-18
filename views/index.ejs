@@ -6,6 +6,12 @@
 		<main class="container">
 			<h1>Hello</h1>
 			<p><%= homeText %></p>
+			<% POSTS.forEach(function(post){ %>
+			  <div class="container">
+					<h3><%= post.postTitle %></h3>
+					<p><%= post.postBody %></p>
+				</div>
+			<% }); %>
 		</main>
 		<%- include('./partials/footer') %>
 	</body>

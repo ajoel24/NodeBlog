@@ -26,6 +26,7 @@ app.get("/", (req, res) => {
 		pageTitle: "Blog | Home",
 		homeText,
 		copyrightYear,
+		POSTS,
 	});
 });
 
@@ -58,7 +59,6 @@ app.post("/composeInput", (req, res) => {
 		postBody: req.body.postBody,
 	};
 	POSTS.push(post);
-	console.log(POSTS);
 	res.redirect("/");
 });
 
