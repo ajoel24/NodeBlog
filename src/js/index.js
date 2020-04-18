@@ -8,7 +8,7 @@ app.use(
 		extended: true,
 	})
 );
-// app.use(express.static("public"));
+app.use(express.static("public"));
 app.set("view engine", "ejs");
 
 const PORT = process.env.PORT || 3000;
